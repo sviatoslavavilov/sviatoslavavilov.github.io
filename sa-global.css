@@ -1,0 +1,850 @@
+/* -------------------------------------------------------
+   SA — Global Minimal Site Styles
+   Variables defined in /public/sa-config.css (auto-generated)
+   ------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: var(--body-weight);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 80ms linear;
+}
+
+a:hover, a:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+/* ---- Layout Shell ---- */
+.sa-shell {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--shell-padding);
+}
+
+/* ---- Header ---- */
+.sa-header {
+  padding: 52px 0 0 0;
+  margin-bottom: 48px;
+}
+
+.sa-header h1 {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: var(--nav-case);
+  color: var(--fg);
+  margin-bottom: 22px;
+}
+
+.sa-header h1 a { color: var(--fg); text-decoration: none; }
+
+.sa-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  row-gap: 4px;
+}
+
+.sa-nav a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: var(--nav-case);
+  color: var(--dim);
+  margin-right: 28px;
+  transition: color 80ms linear;
+}
+
+.sa-nav a:hover, .sa-nav a.active { color: var(--fg); }
+
+/* ---- Section labels ---- */
+.sa-section-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: var(--section-label-case);
+  color: var(--dim);
+  margin-bottom: 32px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+/* ---- Project cards (overview listing) ---- */
+.sa-project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.sa-project-card {
+  display: grid;
+  grid-template-columns: var(--project-video-split);
+  gap: 44px;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .sa-project-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ---- Thumbnail placeholder for macro projects ---- */
+.sa-project-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #0e0e0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sa-project-thumb span {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1e1e1e;
+}
+
+/* ---- Project rows: detailed view (project subpages + Productions) ---- */
+.sa-projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--project-row-gap);
+}
+
+.sa-project-row {
+  display: grid;
+  grid-template-columns: var(--production-video-split);
+  gap: 44px;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .sa-project-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.sa-project-media {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.sa-project-media .embed-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.sa-project-media .embed-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.sa-project-info {
+  padding-top: 4px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.sa-project-title {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: var(--project-title-case);
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+
+.sa-project-title a { color: var(--fg); text-decoration: none; }
+.sa-project-title a:hover { color: var(--accent); }
+
+.sa-project-meta {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 14px;
+  line-height: 1.9;
+}
+
+.sa-project-desc {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: #b0aba4;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.sa-project-link {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 1px;
+  display: inline-block;
+}
+
+.sa-project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- Tracklist ---- */
+.sa-tracklist {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sa-track {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+}
+
+.sa-track-time { color: #3a3a3a; flex-shrink: 0; min-width: 36px; }
+.sa-track-name { color: #7a7570; }
+
+/* ---- Video Credits (under iframe) ---- */
+.sa-video-credits {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  line-height: 1.7;
+  text-align: right;
+}
+
+.sa-credit-item {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.sa-credit-sep {
+  display: inline-block;
+  margin: 0 8px;
+  opacity: 0.4;
+  user-select: none;
+}
+
+/* ---- Live / date list ---- */
+.sa-live-category {
+  margin-bottom: 52px;
+}
+
+.sa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sa-list-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 480px) {
+  .sa-list-item { grid-template-columns: 1fr; gap: 4px; }
+}
+
+.sa-list-date {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  padding-top: 2px;
+}
+
+.sa-list-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+
+.sa-list-sub {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--dim);
+  line-height: 1.6;
+}
+
+.sa-list-role {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: #3d3d3d;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3px;
+}
+
+/* ---- Bio ---- */
+.sa-bio-text {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: var(--body-weight);
+  line-height: 1.9;
+  color: #b8b3ac;
+  max-width: 620px;
+}
+
+.sa-bio-text p { margin-bottom: 20px; }
+.sa-bio-text strong { color: var(--fg); font-weight: 400; }
+.sa-bio-text em { color: #9a9590; font-style: italic; }
+
+/* ---- Contact ---- */
+.sa-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sa-contact-line {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: baseline;
+}
+
+@media (max-width: 480px) {
+  .sa-contact-line { grid-template-columns: 1fr; gap: 2px; }
+}
+
+.sa-contact-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.sa-contact-val {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--fg);
+}
+
+/* ---- Audio Player (releases) ---- */
+.sa-player-section {
+  margin-bottom: 64px;
+}
+
+.sa-player-album-title {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg);
+  margin-bottom: 20px;
+}
+
+.sa-tracklist-player {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #1a1a1a;
+}
+
+.sa-track-player {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #141414;
+  cursor: pointer;
+  transition: background-color 80ms linear;
+}
+
+.sa-track-player:hover { background: #0f0f0f; }
+
+.sa-track-player.playing .sa-track-player-name { color: var(--accent); }
+
+.sa-track-player-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: #333;
+  text-align: right;
+}
+
+.sa-track-player-name {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  transition: color 80ms linear;
+}
+
+.sa-track-player-duration {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: #333;
+}
+
+.sa-player-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.sa-player-btn {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 80ms linear;
+}
+
+.sa-player-btn:hover { color: var(--fg); }
+.sa-player-btn.active { color: var(--accent); }
+
+/* ---- Footer ---- */
+.sa-footer {
+  margin-top: 100px;
+  padding: 36px 0 52px 0;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.sa-footer-subscribe-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.sa-footer a {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.sa-footer a:hover { color: var(--fg); }
+
+/* ---- Spacer ---- */
+.sa-spacer { height: 80px; }
+
+/* ---- Project page breadcrumb ---- */
+.sa-breadcrumb {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.sa-breadcrumb a { color: var(--dim); }
+.sa-breadcrumb a:hover { color: var(--fg); }
+
+/* ---- Project page header ---- */
+.sa-project-page-header {
+  margin-bottom: 48px;
+}
+
+.sa-project-page-title {
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: var(--project-title-case);
+  color: var(--fg);
+  margin-bottom: 12px;
+}
+
+.sa-project-page-subtitle {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  line-height: 2;
+}
+
+.sa-project-page-desc {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: var(--body-weight);
+  color: #b0aba4;
+  line-height: 1.85;
+  max-width: 640px;
+  margin-top: 20px;
+}
+
+/* ---- Clickable Project Card Link (Homepage) ---- */
+.sa-project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 80ms linear;
+}
+
+.sa-project-card-link:hover { opacity: 0.88; color: inherit; }
+
+.sa-project-card-link .sa-project-media {
+  pointer-events: auto; /* iframes and anchors inside stay interactive */
+}
+
+/* ---- Bio: Interviews ---- */
+.sa-bio-interviews { max-width: 640px; }
+
+.sa-bio-interview-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.sa-bio-interview-year {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--dim);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  min-width: 36px;
+}
+
+.sa-bio-interview-link {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 1px;
+  transition: color 80ms linear, border-color 80ms linear;
+}
+
+.sa-bio-interview-link:hover { color: var(--accent); border-color: var(--accent); }
+
+.sa-bio-interview-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--dim);
+  letter-spacing: 0.06em;
+}
+
+/* ---- Bio: Social Subscribe Buttons ---- */
+.sa-bio-social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.sa-bio-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border: 1px solid #1e1e1e;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: color 80ms linear, border-color 80ms linear;
+}
+
+.sa-bio-social-btn:hover { color: var(--fg); border-color: #3a3a3a; }
+
+.sa-bio-social-icon { font-size: 0.8rem; color: #444; }
+
+/* ---- Player: External links per track (YT, SL) ---- */
+.sa-track-player-extras {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sa-player-ext-link {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  color: #333;
+  text-decoration: none;
+  padding: 2px 5px;
+  border: 1px solid #1e1e1e;
+  transition: color 80ms linear, border-color 80ms linear;
+}
+
+.sa-player-ext-link:hover { color: var(--dim); border-color: #3a3a3a; }
+
+/* Track row: 4-column grid (num · name · extras · duration) */
+.sa-track-player {
+  grid-template-columns: 24px 1fr auto auto;
+}
+
+/* ---- Release Hub Nav Tabs ---- */
+.sa-release-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 16px;
+}
+
+.sa-release-tab {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  background: none;
+  border: 1px solid #1e1e1e;
+  padding: 8px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 80ms linear, border-color 80ms linear, background-color 80ms linear;
+}
+
+.sa-release-tab:hover {
+  color: var(--fg);
+  border-color: #3a3a3a;
+}
+
+.sa-release-tab.active {
+  color: var(--fg);
+  border-color: var(--accent);
+  background: #111;
+}
+
+/* ---- Album Player Card ---- */
+.sa-album-player-card {
+  margin-bottom: 64px;
+}
+
+.sa-album-header {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.sa-album-header.no-cover {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (max-width: 640px) {
+  .sa-album-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.sa-album-cover-wrap {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #0e0e0e;
+  border: 1px solid #1e1e1e;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sa-album-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sa-album-cover-placeholder {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333;
+  padding: 16px;
+  text-align: center;
+}
+
+.sa-album-meta-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.sa-album-artist-name {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 6px;
+}
+
+.sa-album-title-text {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  margin-bottom: 12px;
+}
+
+.sa-album-desc-text {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: #b0aba4;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 600px;
+}
+
+.sa-album-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.sa-player-time-badge {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: #444;
+  letter-spacing: 0.06em;
+}
+
+/* Scrub progress bar */
+.sa-scrub-bar-wrap {
+  width: 100%;
+  max-width: 480px;
+  height: 4px;
+  background: #161616;
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sa-scrub-bar-wrap.seekable {
+  height: 6px;
+  cursor: pointer;
+  background: #1c1c1c;
+}
+
+.sa-scrub-bar-wrap.seekable:hover {
+  background: #242424;
+}
+
+.sa-scrub-bar-fill {
+  height: 100%;
+  background: #666;
+  transition: width 100ms linear;
+}
+
+.sa-album-ext-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* ---- Two-Column Opera Cards Grid ---- */
+.sa-opera-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+@media (max-width: 680px) {
+  .sa-opera-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.sa-opera-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ---- Secret Hover Links in Text ---- */
+.sa-secret-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  transition: opacity 0.2s;
+}
+
+.sa-secret-link:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- Album Player Copyright Notice ---- */
+.sa-album-copyright {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  margin-top: 20px;
+  line-height: 1.6;
+}

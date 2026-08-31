@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+
+# scriptDir="${0:A:h}"
+# cd $scriptDir
+# # cd /Users/sa/side-projects/thewhaleproject.github.io
+# # localhost:8000
+# python3 -m http.server 8000 & \
+#     fswatch -l 1 --event "Created" -o $scriptDir | xargs -n1 -I {} \
+#     osascript -e 'tell application "Google Chrome" to tell the active tab of its first window to reload'
+
+
+scriptDir="${0:A:h}/.."
+
+cd $scriptDir
+
+port=8000
+tmux new-session -d -s "localhost:$port" "cd $scriptDir && python3 -m http.server $port"
+
+
+luaDir=$scriptDir/assets/gener
+cd $luaDir
+
+fswatch -l 0.5 --one-per-batch --event "Updated" --event "Created" --event "MovedTo" -Ei ".*(\.lua|\.tex|_\.html)$" -e ".*" -o $scriptDir/../../../ | xargs -n1 -I {} \
+     sh -c "clear; runScript $luaDir/run.lua"
+
+

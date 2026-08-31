@@ -1,0 +1,80 @@
+
+
+\section pr
+
+\e\instagram
+\link Instagram https://www.instagram.com/thewhale_project
+
+\e\website
+\link Website https://thewhaleproject.github.io
+
+
+
+
+
+
+
+
+\section \music
+
+\e\Underwater
+\title Underwater by Sviatoslav Avilov
+\title Soundtrack Underwater by Sviatoslav Avilov
+
+
+ 
+
+
+
+\section visuals
+
+\e\spaceGif
+\link https://fi.imgur.com/cR4uXoh.gif
+
+\e\tetrapodBlueVideo
+\title Tetrapod MultiPlato IFS fractal
+\descr Original algorithms by Sviatoslav Avilov. Multiplato implemented in Processing, Pure Data OSC message control VST3 plugins compiled with Camomile.
+\link https://youtu.be/tlsvsV9zFoE
+\linkFull https://youtu.be/__c9KutV1yw
+
+
+\e\dodecapodDarkVideo
+\title Dodecapod MultiPlato IFS fractal
+\descr Original algorithms by Sviatoslav Avilov. Multiplato implemented in Processing, Pure Data OSC message control VST3 plugins compiled with Camomile.
+\linkFull https://youtu.be/7SlbHYKwGdM
+
+
+\e\developingPatches
+\title Designing the IFS fractal video for the website - automation forever
+\link https://youtu.be/mkrjmrZHwUk
+\linkFull https://youtu.be/-PKBvDefvfA
+
+
+\e\tetrapondGreenGif
+\link https://i.imgur.com/PSAWeU5.gif
+
+\e\octapodColorfulGif
+\link https://i.imgur.com/5Z81RtG.gif
+
+\e\beatingHeart
+\link https://i.imgur.com/BWXXF81.gif
+
+\e\infiniteCrystal
+\link https://i.imgur.com/Rcq1V8y.jpg
+
+
+\e\serhat3Dblue
+\link https://i.imgur.com/nNMMm01.png
+
+
+
+
+
+
+\section articles
+
+
+\e\dubna
+\title Contemporary Museum: from Science Research to Art Content
+\link http://www.mce.su/rus/archive/abstracts/mce27/sect128329/doc354677/
+

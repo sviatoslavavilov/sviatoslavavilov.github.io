@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ff5jc7');
+  src:  url('fonts/icomoon.eot?ff5jc7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ff5jc7') format('truetype'),
+    url('fonts/icomoon.woff?ff5jc7') format('woff'),
+    url('fonts/icomoon.svg?ff5jc7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-headphones:before {
+  content: "\e910";
+}
+.icon-music:before {
+  content: "\e911";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-film:before {
+  content: "\1f36c";
+}
+.icon-play2:before {
+  content: "\ea15";
+}
+.icon-play3:before {
+  content: "\ea1c";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-mail2:before {
+  content: "\ea84";
+}
+.icon-mail3:before {
+  content: "\ea85";
+}
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-amazon:before {
+  content: "\ea87";
+}
+.icon-google-drive:before {
+  content: "\ea8f";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-spotify:before {
+  content: "\ea94";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-vine:before {
+  content: "\ea97";
+}
+.icon-vk:before {
+  content: "\ea98";
+}
+.icon-rss2:before {
+  content: "\ea9c";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-twitch:before {
+  content: "\ea9f";
+}
+.icon-vimeo:before {
+  content: "\eaa0";
+}
+.icon-vimeo2:before {
+  content: "\eaa1";
+}
+.icon-flickr2:before {
+  content: "\eaa4";
+}
+.icon-flickr4:before {
+  content: "\eaa6";
+}
+.icon-dribbble:before {
+  content: "\eaa7";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-trello:before {
+  content: "\eab3";
+}
+.icon-tumblr:before {
+  content: "\eab9";
+}
+.icon-yahoo:before {
+  content: "\eabb";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
+.icon-soundcloud2:before {
+  content: "\eac4";
+}
+.icon-skype:before {
+  content: "\eac5";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+.icon-pinterest2:before {
+  content: "\ead2";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}
+.icon-file-word:before {
+  content: "\eae1";
+}
+.icon-file-excel:before {
+  content: "\eae2";
+}
+
+
+
+<ul class="social-networks square spin-icon bounce">
+  <li><a href="https://www.linkedin.com/" class="icon-linkedin">LinkedIn</a></li>
+  <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
+  <li><a href="https://www.facebook.com/" class="icon-facebook">Facebook</a></li>
+  <li><a href="https://twitch.tv" class="icon-twitch">Twitch</a></li>
+  <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li>
+  <li><a href="https://instagram.com" class="icon-instagram">Instagram</a></li>
+  <li><a href="https://vimeo.com" class="icon-vimeo">Vimeo</a></li>
+  <li><a href="https://vk.com" class="icon-vk">VK</a></li>
+  <li><a href="https://youtube.com" class="icon-youtube">Youtube</a></li>
+  <li><a href="mailto:" class="icon-email">Email</a></li>
+</ul>
+
+
+https://www.templatemonster.com/blog/how-to-add-social-media-icons-website/
