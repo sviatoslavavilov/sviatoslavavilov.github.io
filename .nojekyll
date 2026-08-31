@@ -1,8 +1,1 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  // You might also want this to ensure pages render as /path/index.html
-  trailingSlash: true, 
-};
-module.exports = nextConfig;
 
