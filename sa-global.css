@@ -181,7 +181,7 @@ a:hover, a:focus {
   font-family: 'Space Grotesk', var(--sans);
   font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
   text-transform: none;
   color: var(--fg);
   margin-bottom: 8px;
@@ -197,6 +197,24 @@ a:hover, a:focus {
   color: var(--dim);
   margin-bottom: 14px;
   line-height: 1.9;
+}
+
+.sa-project-subtitle {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.sa-project-role {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-top: 3px;
+  margin-bottom: 14px;
 }
 
 .sa-project-desc {
@@ -302,7 +320,7 @@ a:hover, a:focus {
   font-family: 'Space Grotesk', var(--sans);
   font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
   text-transform: none;
   color: var(--fg);
   margin-bottom: 4px;
@@ -525,7 +543,7 @@ a:hover, a:focus {
   font-family: 'Space Grotesk', var(--sans);
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
   text-transform: none;
   color: var(--fg);
   margin-bottom: 12px;
@@ -760,7 +778,7 @@ a:hover, a:focus {
   font-family: 'Space Grotesk', var(--sans);
   font-weight: 700;
   font-size: 1.2rem;
-  letter-spacing: 0.045em;
+  letter-spacing: 0.03em;
   color: var(--fg);
   margin-bottom: 12px;
 }
