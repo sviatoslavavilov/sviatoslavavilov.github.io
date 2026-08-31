@@ -677,7 +677,7 @@ a:hover, a:focus {
 .sa-album-header {
   display: grid;
   grid-template-columns: 240px 1fr;
-  gap: 36px;
+  gap: 35px;
   align-items: start;
   margin-bottom: 28px;
 }
@@ -740,7 +740,7 @@ a:hover, a:focus {
   font-family: 'Space Grotesk', var(--sans);
   font-weight: 700;
   font-size: 1.2rem;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.045em;
   color: var(--fg);
   margin-bottom: 12px;
 }
@@ -757,9 +757,9 @@ a:hover, a:focus {
 .sa-album-controls-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 19px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: -7px;
 }
 
 .sa-player-time-badge {
