@@ -269,20 +269,27 @@ a:hover, a:focus {
   font-size: 0.65rem;
   letter-spacing: 0.06em;
   color: var(--dim);
-  line-height: 1.7;
+  line-height: 1.65;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 0px;
+  row-gap: 2px;
   text-align: right;
 }
 
-.sa-credit-item {
-  display: inline-block;
+.sa-credit-single,
+.sa-credit-multi,
+.sa-credit-name {
   white-space: nowrap;
-  max-width: 100%;
 }
 
+/* Control separator | spacing here: margin: 0 [right] 0 [left] */
 .sa-credit-sep {
   display: inline-block;
-  margin: 0 8px;
-  opacity: 0.4;
+  margin: 0 6px 0 6px;
+  opacity: 0.38;
   user-select: none;
 }
 
