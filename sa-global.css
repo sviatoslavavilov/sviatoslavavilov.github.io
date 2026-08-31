@@ -178,11 +178,11 @@ a:hover, a:focus {
 }
 
 .sa-project-title {
-  font-family: var(--mono);
-  font-size: 0.85rem;
+  font-family: 'Space Grotesk', var(--sans);
+  font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: var(--project-title-case);
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--fg);
   margin-bottom: 8px;
 }
@@ -299,11 +299,11 @@ a:hover, a:focus {
 }
 
 .sa-list-title {
-  font-family: var(--mono);
-  font-size: 0.78rem;
+  font-family: 'Space Grotesk', var(--sans);
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--fg);
   margin-bottom: 4px;
 }
@@ -458,8 +458,28 @@ a:hover, a:focus {
   border-top: 1px solid #1a1a1a;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 28px;
   flex-wrap: wrap;
+}
+
+.sa-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.sa-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.sa-footer-copyright {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
 }
 
 .sa-footer-subscribe-label {
@@ -502,11 +522,11 @@ a:hover, a:focus {
 }
 
 .sa-project-page-title {
-  font-family: var(--mono);
-  font-size: 1.1rem;
+  font-family: 'Space Grotesk', var(--sans);
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: var(--project-title-case);
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--fg);
   margin-bottom: 12px;
 }
