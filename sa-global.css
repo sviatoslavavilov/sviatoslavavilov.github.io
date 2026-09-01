@@ -24,6 +24,8 @@ body {
   min-height: 100vh;
 }
 
+
+
 a {
   color: var(--fg);
   text-decoration: none;
@@ -56,6 +58,7 @@ a:hover, a:focus {
   text-transform: var(--nav-case);
   color: var(--fg);
   margin-bottom: 22px;
+  /* margin-left: 5px; */
 }
 
 .sa-header h1 a { color: var(--fg); text-decoration: none; }
@@ -65,6 +68,7 @@ a:hover, a:focus {
   flex-wrap: wrap;
   gap: 0;
   row-gap: 4px;
+  /* margin-left: 5px; */
 }
 
 .sa-nav a {
@@ -91,7 +95,119 @@ a:hover, a:focus {
   border-bottom: 1px solid #1e1e1e;
 }
 
+/* ### Option A: Underline reaches the outer vertical boundary of the shell */
+/* .sa-section-label { */
+/*   font-family: var(--mono); */
+/*   font-size: 0.65rem; */
+/*   letter-spacing: var(--label-letter-spacing); */
+/*   text-transform: var(--section-label-case); */
+/*   color: var(--dim); */
+/*   margin-bottom: 32px; */
+/*   padding-bottom: 10px; */
+  
+/*   /1* --- Reaches the outer shell boundary to the left --- *1/ */
+/*   margin-left: calc(-1 * var(--shell-padding)); */
+/*   padding-left: var(--shell-padding); */
+/*   border-bottom: 1px solid #1e1e1e; */
+/* } */
 /* ---- Project cards (overview listing) ---- */
+
+
+
+
+
+/* /1* ### Option B: Underline shoots all the way through to the left edge of the screen *1/ */
+/* /1* Ensure no horizontal scrollbar *1/ */
+/* html, body { */
+/*   overflow-x: hidden; */
+/* } */
+/* .sa-section-label { */
+/*   position: relative; */
+/*   font-family: var(--mono); */
+/*   font-size: 0.65rem; */
+/*   letter-spacing: var(--label-letter-spacing); */
+/*   text-transform: var(--section-label-case); */
+/*   color: var(--dim); */
+/*   margin-bottom: 32px; */
+/*   padding-bottom: 10px; */
+/*   border-bottom: none; /1* remove inline border *1/ */
+/* } */
+/* /1* Full‑bleed left line *1/ */
+/* .sa-section-label::after { */
+/*   content: ''; */
+/*   position: absolute; */
+/*   bottom: 0; */
+/*   left: -100vw;  /1* Shoots all the way off the left screen *1/ */
+/*   right: 0;      /1* Ends at the right edge of the content *1/ */
+/*   height: 1px; */
+/*   background: #1e1e1e; */
+/* } */
+
+
+
+
+/* ### Option C: Make it 100 % controllable via a single CSS variable */
+/* Add a custom property in `public/sa-global.css`: */
+:root {
+  /* Controls section underline left extension:
+     - "0"                       -> Standard (stops at text left)
+     - "var(--shell-padding)"    -> Reaches header shell left edge
+     - "100vw"                   -> Goes all the way out to screen edge
+  */
+  --section-line-left: 100vw;
+  --footer-line-left: 100vw;
+}
+
+.sa-section-label {
+  position: relative;
+  border-bottom: none;
+}
+
+.sa-section-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(-1 * var(--section-line-left, 0px));
+  right: 0;
+  height: 1px;
+  background: #1e1e1e;
+}
+
+.sa-footer {
+  position: relative;
+  border-top: none; /* remove fixed border */
+}
+
+.sa-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--footer-line-left, 0px));
+  right: 0;
+  height: 1px;
+  background: #1a1a1a;
+}
+
+/* end option C */
+
+/* ## 2. The 5 px Minimum Left Space on Narrow / Squeezed Screens */
+
+/* The `.sa-shell` selector uses `var(--shell-padding)` (currently `28px`). To guarantee an exact **5 px** margin when the viewport is narrow: */
+/* .sa-shell { */
+/*   max-width: var(--max-w); */
+/*   margin: 0 auto; */
+/*   padding: 0 var(--shell-padding); */
+/* } */
+
+/* Narrow screen: exact 5px space from border */
+@media (max-width: 900px) {
+  .sa-shell {
+    margin-left: 9px;
+  }
+}
+
+
+
 .sa-project-cards {
   display: flex;
   flex-direction: column;
