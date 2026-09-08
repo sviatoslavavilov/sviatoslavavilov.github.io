@@ -22,6 +22,7 @@ html {
 body {
   background: var(--bg);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -211,10 +212,12 @@ a:hover, a:focus {
 .sa-project-cards {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 24px;
 }
 
 .sa-project-card {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: var(--project-video-split);
   gap: 44px;
@@ -691,18 +694,76 @@ a:hover, a:focus {
   margin-top: 20px;
 }
 
-/* ---- Clickable Project Card Link (Homepage) ---- */
-.sa-project-card-link {
+/* ---- Project Card Row & Hover Highlight (Homepage) ---- */
+.sa-project-card-row {
+  position: relative;
+  padding: 20px 0;
+}
+
+.sa-project-card-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  pointer-events: none;
+  transition: background-color 140ms ease, border-color 140ms ease;
+  z-index: 0;
+}
+
+.sa-project-card-row:has(.sa-project-info-link:hover)::before,
+.sa-project-card-row:has(.sa-project-thumb-link:hover)::before {
+  background: rgba(255, 255, 255, 0.016);
+  border-top-color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+.sa-project-info-link {
   display: block;
   color: inherit;
   text-decoration: none;
-  transition: opacity 80ms linear;
+  cursor: pointer;
 }
 
-.sa-project-card-link:hover { opacity: 0.88; color: inherit; }
+.sa-project-info-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
 
-.sa-project-card-link .sa-project-media {
-  pointer-events: auto; /* iframes and anchors inside stay interactive */
+.sa-project-info-link .sa-project-title {
+  transition: color 120ms ease;
+}
+
+.sa-project-info-link:hover .sa-project-title {
+  color: var(--accent);
+}
+
+.sa-project-info-link:hover .sa-project-link {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.sa-project-thumb-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sa-project-thumb-link .sa-project-thumb {
+  transition: background-color 120ms ease;
+}
+
+.sa-project-thumb-link:hover .sa-project-thumb {
+  background: #141414;
+}
+
+.sa-project-thumb-link:hover .sa-project-thumb span {
+  color: var(--accent);
 }
 
 /* ---- Bio: Interviews ---- */
