@@ -3,6 +3,9 @@
 :root {
   --max-w: 860px;
   --shell-padding: 28px;
+  --menu-left-offset: -60px;
+  --menu-min-gap: 9px;
+  --nav-left-offset: 0px;
   --project-video-split: 1fr 1fr;
   --production-video-split: 1fr 1fr;
   --project-row-gap: 64px;

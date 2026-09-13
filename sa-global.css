@@ -19,6 +19,8 @@ html {
   -webkit-font-smoothing: antialiased;
   /* Remove system blue highlight color on tap targets / links on mobile */
   -webkit-tap-highlight-color: transparent;
+  /* Prevent horizontal layout shifts across pages when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -62,6 +64,37 @@ a .sa-project-link {
   margin-bottom: 48px;
 }
 
+/* Desktop: horizontal offset to keep the menu loose from the main content column.
+   Clamped so it automatically snaps to --menu-min-gap (preserving the margin from the browser left border)
+   and never gets cut off as the window shrinks. */
+@media (min-width: 901px) {
+  .sa-header {
+    position: relative;
+    left: min(
+      0px,
+      max(
+        var(--menu-left-offset, 0px),
+        calc(var(--menu-min-gap, 9px) - (100vw - var(--max-w)) / 2)
+      )
+    );
+  }
+  .sa-nav {
+    position: relative;
+    left: var(--nav-left-offset, 0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .sa-header {
+    position: relative;
+    left: 0px;
+  }
+  .sa-nav {
+    position: relative;
+    left: 0px;
+  }
+}
+
 .sa-header h1 {
   font-family: var(--mono);
   font-weight: 400;
@@ -95,7 +128,7 @@ a .sa-project-link {
 
 .sa-nav a:hover, .sa-nav a.active { color: var(--fg); }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .sa-nav {
     justify-content: flex-end;
     padding-right: 9px;
@@ -416,7 +449,7 @@ a .sa-project-link {
   font-size: .67rem;
   letter-spacing: 0.06em;
   color: var(--dim);
-  line-height: 1.42;
+  line-height: 1.46;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
