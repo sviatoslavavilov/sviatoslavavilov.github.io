@@ -65,7 +65,7 @@ a .sa-project-link {
 .sa-header h1 {
   font-family: var(--mono);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.058rem;
   letter-spacing: 0.12em;
   text-transform: var(--nav-case);
   color: var(--fg);
@@ -85,7 +85,7 @@ a .sa-project-link {
 
 .sa-nav a {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.765rem;
   letter-spacing: 0.1em;
   text-transform: var(--nav-case);
   color: var(--dim);
@@ -109,10 +109,10 @@ a .sa-project-link {
 /* ---- Section labels ---- */
 .sa-section-label {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.645rem;
   letter-spacing: var(--label-letter-spacing);
   text-transform: var(--section-label-case);
-  color: var(--dim);
+  color: #8c8780;
   margin-bottom: 32px;
   padding-bottom: 10px;
   border-bottom: 1px solid #1e1e1e;
@@ -338,36 +338,36 @@ a .sa-project-link {
 
 .sa-project-meta {
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--dim);
+  font-size: 0.69rem;
+  letter-spacing: 0.07em;
+  color: #8c8780;
   margin-bottom: 14px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 .sa-project-subtitle {
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--dim);
+  font-size: 0.69rem;
+  letter-spacing: 0.07em;
+  color: #8c8780;
   margin-bottom: 0;
   line-height: 1.5;
 }
 
 .sa-project-role {
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: #555;
+  font-size: 0.69rem;
+  letter-spacing: 0.07em;
+  color: #7a756f;
   margin-top: 3px;
   margin-bottom: 14px;
 }
 
 .sa-project-desc {
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   color: #b0aba4;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 14px;
 }
 
@@ -401,22 +401,22 @@ a .sa-project-link {
   align-items: baseline;
   gap: 14px;
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.69rem;
   letter-spacing: 0.06em;
-  color: var(--dim);
+  color: #8c8780;
 }
 
-.sa-track-time { color: #3a3a3a; flex-shrink: 0; min-width: 36px; }
-.sa-track-name { color: #7a7570; }
+.sa-track-time { color: #555; flex-shrink: 0; min-width: 36px; }
+.sa-track-name { color: #b0aba4; font-size: 0.72rem; }
 
 /* ---- Video Credits (under iframe) ---- */
 .sa-video-credits {
   margin-top: 8px;
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: .67rem;
   letter-spacing: 0.06em;
   color: var(--dim);
-  line-height: 1.65;
+  line-height: 1.42;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -581,14 +581,15 @@ a .sa-project-link {
 
 .sa-track-player-num {
   font-family: var(--mono);
-  font-size: 0.62rem;
-  color: #333;
+  font-size: 0.64rem;
+  color: #444;
   text-align: right;
 }
 
+span.sa-track-player-name,
 .sa-track-player-name {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.74rem;
   letter-spacing: 0.04em;
   color: var(--fg);
   transition: color 80ms linear;
@@ -596,8 +597,8 @@ a .sa-project-link {
 
 .sa-track-player-duration {
   font-family: var(--mono);
-  font-size: 0.62rem;
-  color: #333;
+  font-size: 0.64rem;
+  color: #444;
 }
 
 .sa-player-controls {
@@ -649,7 +650,7 @@ a .sa-project-link {
 
 .sa-footer-copyright {
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: .665rem;
   letter-spacing: 0.08em;
   color: var(--dim);
 }
@@ -705,16 +706,16 @@ a .sa-project-link {
 
 .sa-project-page-subtitle {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.69rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: #8c8780;
   line-height: 2;
 }
 
 .sa-project-page-desc {
   font-family: var(--sans);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: var(--body-weight);
   color: #b0aba4;
   line-height: 1.85;
@@ -984,7 +985,7 @@ a .sa-project-link {
 
 .sa-album-artist-name {
   font-family: var(--mono);
-  font-size: 0.87rem;
+  font-size: 0.82rem;
   letter-spacing: 0.05em;
   color: #a49f98;
   line-height: 1.25;
@@ -1002,7 +1003,7 @@ a .sa-project-link {
 
 .sa-album-desc-text {
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   color: #b0aba4;
   line-height: 1.6;
   margin-bottom: 18px;
@@ -1112,7 +1113,7 @@ a.sa-secret-link:focus,
 /* ---- Album Player Copyright Notice ---- */
 .sa-album-copyright {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: .665rem;
   letter-spacing: 0.04em;
   color: var(--dim);
   margin-top: 14px;
