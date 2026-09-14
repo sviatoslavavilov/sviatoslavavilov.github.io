@@ -13,7 +13,7 @@
   --fg: #e8e6e1;
   --dim: #6b6b6b;
   --accent: #c8b89a;
-  --mono: 'Space Mono', 'Courier New', monospace;
+  --mono: 'Space Mono', ui-monospace, Menlo, 'Courier New', monospace;
   --sans: 'Inter', system-ui, sans-serif;
   --body-weight: 300;
   --desc-font-size: 0.725rem;

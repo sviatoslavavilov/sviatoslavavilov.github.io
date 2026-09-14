@@ -3,6 +3,25 @@
    Variables defined in /public/sa-config.css (auto-generated)
    ------------------------------------------------------- */
 
+/* Self-hosted arrow glyph for Space Mono (Google Fonts default latin subset omits U+2197) */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/SpaceMono-Arrow.woff2') format('woff2');
+  unicode-range: U+2197, U+FE0E;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/SpaceMono-Bold-Arrow.woff2') format('woff2');
+  unicode-range: U+2197, U+FE0E;
+  font-display: swap;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -49,6 +68,14 @@ a:hover, a:focus {
 a .sa-project-link {
   font-variant-emoji: text;
   color: inherit;
+}
+
+.sa-link-arrow {
+  display: inline-block;
+  font-family: var(--mono);
+  font-variant-emoji: text;
+  margin-left: 2px;
+  line-height: 1;
 }
 
 /* ---- Layout Shell ---- */
@@ -131,7 +158,7 @@ a .sa-project-link {
 @media (max-width: 768px) {
   .sa-nav {
     justify-content: flex-end;
-    padding-right: 9px;
+    padding-right: 0px;
   }
   .sa-nav a {
     margin-right: 0;
@@ -260,10 +287,12 @@ a .sa-project-link {
 /*   padding: 0 var(--shell-padding); */
 /* } */
 
-/* Narrow screen: exact 5px space from border on left */
-@media (max-width: 900px) {
+/* Tablet & Mobile: snap shell padding cleanly to --menu-min-gap (default 9px)
+   so videos, columns, and navigation all align closely and symmetrically to the screen edges */
+@media (max-width: 768px) {
   .sa-shell {
-    margin-left: 9px;
+    padding: 0 var(--menu-min-gap, 9px);
+    margin: 0 auto;
   }
 }
 
